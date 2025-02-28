@@ -7,8 +7,12 @@ stages:
       hash: md5
       md5: 764ff8fe46597d80d469e951ba76ef5c
       size: 19360
+    - path: .\src\preprocess.py
+      hash: md5
+      md5: bcd6523910572f9e154d0a4111df01d5
+      size: 685
     outs:
     - path: .\data\processed\processed_data.csv
       hash: md5
-      md5: 359334c4deb77098abcf9f0d741b97cd
-      size: 21555
+      md5: 07105a3a76451449142df3a681e3b5d0
+      size: 36775

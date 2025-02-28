@@ -7,19 +7,18 @@ print(df.head())
 # print(df.isnull().sum())
 
 # diplay unique values in each column
-# for col in df.columns:
-#     print(col, df[col].nunique())
+for col in df.columns:
+    print(col, df[col].nunique())
 
 # drop all the null values
 df.dropna(inplace=True)
-# print(df.isnull().sum())
+print(df.isnull().sum())
 # apply standard scalar transformation
 
 scaler = StandardScaler()
-df['Salary'] = scaler.fit_transform(df[['Salary']])
-df['Years of Experience'] = scaler.fit_transform(df[['Years of Experience']])
-# also age
-df['Age'] = scaler.fit_transform(df[['Age']])
+columns_to_scale = ['Salary', 'Years of Experience', 'Age']
+for column in columns_to_scale:
+    df[column] = scaler.fit_transform(df[[column]])
 print(df.head())
-# save the dataset
+
 df.to_csv('data/processed/processed_data.csv', index=False)
