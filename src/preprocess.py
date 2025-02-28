@@ -11,7 +11,7 @@ print(df.isnull().sum())
 
 # drop all the null values
 df.dropna(inplace=True)
-print(df.isnull().sum())
+# print(df.isnull().sum())
 
 # save the dataset
 df.to_csv('data/processed/processed_data.csv', index=False)
