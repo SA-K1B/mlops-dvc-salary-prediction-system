@@ -1,0 +1,7 @@
+stages:
+  preprocess:
+    cmd: python .\src\preprocess.py
+    deps:
+    - .\data\raw\Salary_Data.csv
+    outs:
+    - .\data\processed\processed_data.csv
